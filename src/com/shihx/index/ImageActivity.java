@@ -6,7 +6,6 @@ package com.shihx.index;
 
 import com.shihx.index.utils.ImageUtil;
 
-import sf.hmg.turntest.R;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;

@@ -1,5 +1,4 @@
 /**
- *  Author :  hmg25
  *  Description :
  */
 package com.shihx.index.utils;
@@ -19,7 +18,7 @@ import android.graphics.Shader.TileMode;
 import android.graphics.drawable.Drawable;
 
 /**
- * hmg25's android Type
+ * 
  *
  *@author shihx1
  *
