@@ -2,4 +2,8 @@
 <resources>
 	<string name="hello">Hello World, Utils!</string>
 	<string name="app_name">Tools</string>
+	<string name="image_activity_str">ImageActivity</string>
+	<string name="action_activity_str">ActionItemActivity</string>
+	<string name="actionbar_viewpager_activity_str">ActionBarViewPager</string>
+	<string name="actionbar_viewpager_str">actionbar and viewpager</string>
 </resources>

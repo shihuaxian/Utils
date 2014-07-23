@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.shihx.index" android:versionCode="1" android:versionName="1.0">
-	<application android:icon="@drawable/icon" android:label="@string/app_name">
-		<activity android:name="com.shihx.index.ImageActivity" android:label="@string/app_name">
+	<application android:icon="@drawable/icon" android:label="@string/app_name" 
+	     >
+		<activity android:name="com.shihx.index.IndexActivity" android:label="@string/app_name" android:theme="@style/Theme.Sherlock" >
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-
+		<activity android:name="com.shihx.index.ActionItemActivity" android:label="@string/action_activity_str" android:theme="@style/Theme.Sherlock">
+		    <intent-filter >
+		        <action android:name="android.intent.action.MAIN"/>
+		        <category android:name="com.shihx.index.demos" />
+		    </intent-filter>
+		</activity>
+		<activity android:name="com.shihx.index.ImageActivity" android:label="@string/image_activity_str" android:theme="@style/Theme.Sherlock">
+		    <intent-filter >
+		        <action android:name="android.intent.action.MAIN"/>
+		        <category android:name="com.shihx.index.demos" />
+		    </intent-filter>
+		</activity>
+		<activity android:name="com.shihx.index.ActionBarViewpager" android:label="@string/actionbar_viewpager_activity_str" android:theme="@style/Theme.Sherlock">
+		    <intent-filter >
+		        <action android:name="android.intent.action.MAIN"/>
+		        <category android:name="com.shihx.index.demos" />
+		    </intent-filter>
+		</activity>
 	</application>
 	<uses-sdk android:minSdkVersion="8" />
 
