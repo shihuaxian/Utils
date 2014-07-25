@@ -2,18 +2,20 @@ package com.shihx.index;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
+import com.shihx.index.viewpager.ViewPagerFragment;
 
 @SuppressLint("NewApi")
-public class ActionBarViewpager extends SherlockActivity implements SearchView.OnQueryTextListener,SearchView.OnSuggestionListener{
+public class ActionBarViewpager extends SherlockFragmentActivity implements SearchView.OnQueryTextListener,SearchView.OnSuggestionListener{
 	final String TAG = "ActionBarViewpager";
 	final int LOCAL_VIDEO = 10001;
 	final int LOCAL_AUDIO = 10002;
@@ -26,11 +28,17 @@ public class ActionBarViewpager extends SherlockActivity implements SearchView.O
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.actionbar_viewpager);
 		//currentMode = startActionMode(new LocalVideoActionBar());
+		fillFragment();
 	}
 	
-	public void showVideoAction(View v){
+	private void fillFragment(){
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		fragmentManager.beginTransaction().replace(R.id.viewpager_content_frame, new ViewPagerFragment()).commit();
+	}
+	
+	/*public void showVideoAction(View v){
 		CURRENTACTION = LOCAL_VIDEO;
-		int i = CURRENTACTION == LOCAL_VIDEO ? 1 : 0;
+		//int i = CURRENTACTION == LOCAL_VIDEO ? 1 : 0;
 		invalidateOptionsMenu();
 	}
 	
@@ -43,7 +51,7 @@ public class ActionBarViewpager extends SherlockActivity implements SearchView.O
 	public void showFileAction(View v){
 		CURRENTACTION = LOCAL_FILE;
 		invalidateOptionsMenu();
-	}
+	}*/
 
 	private void createActionMode(Menu menu){
 		switch(CURRENTACTION){

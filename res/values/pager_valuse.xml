@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_search">Search</string>
+    <string name="dummy_section_text">You are in Tab %1d</string>
+    
+    <string name="launch_intro">Fragment界面</string>
+    <string name="launch_click_me">一个按钮</string>
+    <string name="common_intro">这是CommonUIFragment界面</string>
+    <string name="nav_desc">nav_desc</string>
+</resources>

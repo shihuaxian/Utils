@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nav_menu_items">
+        <item>Store home</item>
+        <item>My apps</item>        
+        <item>Shop apps</item>
+        <item>My wishilist</item>
+        <item>Redeem</item>
+        <item>SETTINGS</item>
+        <item>HELP</item>               
+    </string-array>
+    
+    <string-array name="nav_tab_menu">
+        <item>本地视频</item>
+        <item>本地音乐</item>
+        <item>文件浏览</item>
+    </string-array>
+</resources>

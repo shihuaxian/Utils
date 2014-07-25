@@ -4,7 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-	<TextView
+    <FrameLayout
+            android:id="@+id/viewpager_content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+    </FrameLayout>
+	<!-- <TextView
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:text="@string/actionbar_viewpager_str" />
@@ -22,5 +27,5 @@
 	    android:onClick="showFileAction"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="file" />
+	    android:text="file" /> -->
 </LinearLayout>
