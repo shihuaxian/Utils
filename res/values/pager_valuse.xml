@@ -8,4 +8,8 @@
     <string name="launch_click_me">一个按钮</string>
     <string name="common_intro">这是CommonUIFragment界面</string>
     <string name="nav_desc">nav_desc</string>
+    
+    <string name="video_fr_common_content">video fragment</string>
+    <string name="audio_fr_common_content">audio fragment</string>
+    <string name="file_fr_common_content">file fragment</string>
 </resources>

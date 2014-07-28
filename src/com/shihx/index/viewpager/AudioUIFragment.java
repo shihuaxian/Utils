@@ -9,13 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class LaunchUIFragment extends Fragment {
+public class AudioUIFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		
-		View rootView = inflater.inflate(R.layout.fragment_selection_launch, container, false);
+		View rootView = inflater.inflate(R.layout.audio_ui_fragment, container, false);
 		
 		return rootView;
 	}

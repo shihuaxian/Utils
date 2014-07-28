@@ -6,21 +6,19 @@ import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
+import com.shihx.index.utils.Constant;
 import com.shihx.index.viewpager.ViewPagerFragment;
+import com.shihx.index.viewpager.ViewPagerFragment.ChangeActionModeListener;
 
 @SuppressLint("NewApi")
-public class ActionBarViewpager extends SherlockFragmentActivity implements SearchView.OnQueryTextListener,SearchView.OnSuggestionListener{
+public class ActionBarViewpager extends SherlockFragmentActivity implements SearchView.OnQueryTextListener,SearchView.OnSuggestionListener,ChangeActionModeListener{
 	final String TAG = "ActionBarViewpager";
-	final int LOCAL_VIDEO = 10001;
-	final int LOCAL_AUDIO = 10002;
-	final int LOCAL_FILE = 10003;
-	private int CURRENTACTION = LOCAL_VIDEO;
+	private int CURRENTACTION = Constant.LOCAL_VIDEO;
 	ActionMode currentMode;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +31,7 @@ public class ActionBarViewpager extends SherlockFragmentActivity implements Sear
 	
 	private void fillFragment(){
 		FragmentManager fragmentManager = getSupportFragmentManager();
-		fragmentManager.beginTransaction().replace(R.id.viewpager_content_frame, new ViewPagerFragment()).commit();
+		fragmentManager.beginTransaction().replace(R.id.viewpager_content_frame, new ViewPagerFragment(this)).commit();
 	}
 	
 	/*public void showVideoAction(View v){
@@ -53,9 +51,10 @@ public class ActionBarViewpager extends SherlockFragmentActivity implements Sear
 		invalidateOptionsMenu();
 	}*/
 
-	private void createActionMode(Menu menu){
-		switch(CURRENTACTION){
-		case LOCAL_VIDEO:
+	protected void createActionMode(int mode, Menu menu){
+		menu.clear();
+		switch(mode){
+		case Constant.LOCAL_VIDEO:
 			SearchView searchView = new SearchView(getSupportActionBar().getThemedContext());
 			searchView.setMaxWidth(600);
 			searchView.setQueryHint("input words");
@@ -69,12 +68,12 @@ public class ActionBarViewpager extends SherlockFragmentActivity implements Sear
 			.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM );
 			menu.add("Setting").setShowAsAction(MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 			break;
-		case LOCAL_AUDIO:
+		case Constant.LOCAL_AUDIO:
 			menu.add("Plus").setIcon(R.drawable.action_plus_icon)
 			.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 			menu.add("Setting").setShowAsAction(MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 			break;
-		case LOCAL_FILE:
+		case Constant.LOCAL_FILE:
 			menu.add("Refresh").setIcon(R.drawable.action_refresh_icon)
 			.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 			menu.add("Setting").setShowAsAction(MenuItem.SHOW_AS_ACTION_WITH_TEXT);
@@ -82,12 +81,12 @@ public class ActionBarViewpager extends SherlockFragmentActivity implements Sear
 		}
 	}
 	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
 		Log.i(TAG, "enter onCreateOptionsMenu");
-		menu.clear();
-		createActionMode(menu);
+		createActionMode(CURRENTACTION,menu);
 		return true;
 	}
 	
@@ -120,4 +119,12 @@ public class ActionBarViewpager extends SherlockFragmentActivity implements Sear
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public void changeActionMode(int mode) {
+		// TODO Auto-generated method stub
+		CURRENTACTION = mode;
+		invalidateOptionsMenu();
+	}
+	
 }

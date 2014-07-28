@@ -8,7 +8,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
     	android:textSize="18sp"
-    	android:text="@string/common_intro"
+    	android:text="@string/file_fr_common_content"
         />
     
     <TextView 

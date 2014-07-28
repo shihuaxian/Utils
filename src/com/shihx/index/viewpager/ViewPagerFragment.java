@@ -1,5 +1,6 @@
 package com.shihx.index.viewpager;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,16 +15,15 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
-import android.widget.RelativeLayout;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.shihx.index.R;
 import com.shihx.index.utils.Constant;
 
+@SuppressLint("ValidFragment")
 public class ViewPagerFragment extends SherlockFragment {
 	private View mRootView;
 	private ViewPager mViewPager;
@@ -36,6 +36,11 @@ public class ViewPagerFragment extends SherlockFragment {
 	
 	TabFragmentPagerAdapter mAdapter;
 	private int currentIndicatorLeft = 0;
+	ChangeActionModeListener modeListener;
+	
+	public ViewPagerFragment(ChangeActionModeListener changeActionModeListener){
+		modeListener = changeActionModeListener;
+	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -73,13 +78,14 @@ public class ViewPagerFragment extends SherlockFragment {
 		indicatorWidth = dm.widthPixels /3;
 		
 		LayoutParams cursor_Params = iv_nav_indicator.getLayoutParams();
+		//Toast.makeText(getActivity(), "indicatorWidth is:"+indicatorWidth, 1).show();
 		cursor_Params.width = indicatorWidth;
 		iv_nav_indicator.setLayoutParams(cursor_Params);
 		
 		tabs = getActivity().getResources().getStringArray(R.array.nav_tab_menu);
 		for(int i=0;i<tabs.length;i++){
 			RadioButton rb = (RadioButton) mInflater.inflate(R.layout.nav_radiogroup_item, null);
-			rb.setId(i);
+			rb.setId(Constant.LOCAL_VIDEO+i);
 			rb.setText(tabs[i]);
 			rb.setLayoutParams(new LayoutParams(indicatorWidth,	LayoutParams.MATCH_PARENT));
 			tabGroup.addView(rb);
@@ -128,10 +134,14 @@ public class ViewPagerFragment extends SherlockFragment {
 					iv_nav_indicator.setAnimation(animation);
 					mViewPager.setCurrentItem(checkedId);
 					currentIndicatorLeft = radioButton.getLeft();
+					modeListener.changeActionMode(checkedId);
+					//getActivity().getActionBar().setSelectedNavigationItem(checkedId);
 				}
 			}
 		});
 	}
+	
+	
 	
 	
 	@Override
@@ -156,15 +166,23 @@ public class ViewPagerFragment extends SherlockFragment {
 			Fragment ft = null;
 			switch (arg0) {
 			case 0:
-				ft = new LaunchUIFragment();
-				break;
-
-			default:
-				ft = new CommonUIFragment();
-				
+				ft = new VideoUIFragment();
 				Bundle args = new Bundle();
 				args.putString(Constant.ARGUMENTS_NAME, tabs[arg0]);
 				ft.setArguments(args);
+				break;
+			case 1:
+				ft = new AudioUIFragment();
+				break;
+			case 2:
+				ft = new FilesUIFragment();
+				break;
+			default:
+				/*ft = new VideoUIFragment();
+				
+				Bundle args = new Bundle();
+				args.putString(Constant.ARGUMENTS_NAME, tabs[arg0]);
+				ft.setArguments(args);*/
 				
 				break;
 			}
@@ -173,9 +191,12 @@ public class ViewPagerFragment extends SherlockFragment {
 
 		@Override
 		public int getCount() {
-			
 			return tabs.length;
 		}
 		
+	}
+	
+	public interface ChangeActionModeListener{
+		public void changeActionMode(int mode);
 	}
 }
