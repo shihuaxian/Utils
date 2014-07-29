@@ -178,12 +178,6 @@ public class ViewPagerFragment extends SherlockFragment {
 				ft = new FilesUIFragment();
 				break;
 			default:
-				/*ft = new VideoUIFragment();
-				
-				Bundle args = new Bundle();
-				args.putString(Constant.ARGUMENTS_NAME, tabs[arg0]);
-				ft.setArguments(args);*/
-				
 				break;
 			}
 			return ft;

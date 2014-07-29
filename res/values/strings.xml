@@ -6,6 +6,7 @@
 	<string name="action_activity_str">ActionItemActivity</string>
 	<string name="actionbar_viewpager_activity_str">ActionBarViewPager</string>
 	<string name="actionbar_viewpager_str">actionbar and viewpager</string>
+	<string name="letter_listview_str">letter_listview_str</string>
 	
 	
 	<string name="clear"></string>
@@ -28,4 +29,6 @@
     <string name="fragment_tab_one">This is One</string>    
     <string name="fragment_tab_two">This is Two</string>
     <string name="fragment_tab_three">This is Three</string>  
+    
+    <string name="sort_char_txt_str">A</string>
 </resources>

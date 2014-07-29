@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+	<LinearLayout
+	    android:id="@+id/viewOverlay"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	    <TextView
+            android:id="@+id/tvOverlay"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#CCBCC5"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/sort_char_txt_str"
+            android:textColor="#3399ff"
+            android:textSize="28sp" />
+	</LinearLayout>
+	<com.shihx.index.listview.LetterView
+	    android:id="@+id/letterView"
+	    android:layout_width="45dp"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentRight="true" >
+	    
+	</com.shihx.index.listview.LetterView>
+</RelativeLayout>
