@@ -12,8 +12,9 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
 import com.shihx.index.utils.Constant;
+import com.shihx.index.viewpager.SlideTabsFragment;
 import com.shihx.index.viewpager.ViewPagerFragment;
-import com.shihx.index.viewpager.ViewPagerFragment.ChangeActionModeListener;
+import com.shihx.index.viewpager.SlideTabsFragment.ChangeActionModeListener;
 
 @SuppressLint("NewApi")
 public class ActionBarViewpager extends SherlockFragmentActivity implements SearchView.OnQueryTextListener,SearchView.OnSuggestionListener,ChangeActionModeListener{
@@ -31,7 +32,7 @@ public class ActionBarViewpager extends SherlockFragmentActivity implements Sear
 	
 	private void fillFragment(){
 		FragmentManager fragmentManager = getSupportFragmentManager();
-		fragmentManager.beginTransaction().replace(R.id.viewpager_content_frame, new ViewPagerFragment(this)).commit();
+		fragmentManager.beginTransaction().replace(R.id.viewpager_content_frame, new SlideTabsFragment(this)).commit();
 	}
 	
 	/*public void showVideoAction(View v){

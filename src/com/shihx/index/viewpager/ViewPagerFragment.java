@@ -156,7 +156,7 @@ public class ViewPagerFragment extends SherlockFragment {
 		super.onPause();
 	}
 	
-	public static class TabFragmentPagerAdapter extends FragmentPagerAdapter{
+	public class TabFragmentPagerAdapter extends FragmentPagerAdapter{
 		public TabFragmentPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
