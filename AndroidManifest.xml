@@ -31,7 +31,13 @@
 		    </intent-filter>
 		</activity>
 		<activity android:name="com.shihx.index.LetterListView" android:label="@string/letter_listview_str" android:theme="@style/Theme.Sherlock">
-		    <intent-filter >
+		    <intent-filter > 
+		        <action android:name="android.intent.action.MAIN"/>
+		        <category android:name="com.shihx.index.demos" />
+		    </intent-filter>
+		</activity>
+		<activity android:name="com.shihx.index.AnimationActivity" android:label="@string/animationActivity" android:theme="@style/Theme.Sherlock">
+		    <intent-filter > 
 		        <action android:name="android.intent.action.MAIN"/>
 		        <category android:name="com.shihx.index.demos" />
 		    </intent-filter>

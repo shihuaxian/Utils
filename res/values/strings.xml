@@ -8,6 +8,7 @@
 	<string name="actionbar_viewpager_str">actionbar and viewpager</string>
 	<string name="letter_listview_str">letter_listview_str</string>
 	<string name="slideActivity_str">slideActivity_str</string>
+	<string name="animationActivity">AnimationActivity</string>
 	
 	
 	<string name="clear"></string>
