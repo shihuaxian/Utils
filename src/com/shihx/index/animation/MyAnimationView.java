@@ -20,7 +20,6 @@ import android.graphics.drawable.shapes.OvalShape;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Toast;
 
 @SuppressLint("NewApi")
 public class MyAnimationView extends View implements AnimatorUpdateListener{

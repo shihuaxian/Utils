@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.shihx.index" android:versionCode="1" android:versionName="1.0">
 	
+	<uses-permission android:name="android.permission.INTERNET" />  
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+ 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     
 	<application android:icon="@drawable/icon" android:label="@string/app_name" 
 	     >
@@ -37,6 +42,12 @@
 		    </intent-filter>
 		</activity>
 		<activity android:name="com.shihx.index.AnimationActivity" android:label="@string/animationActivity" android:theme="@style/Theme.Sherlock">
+		    <intent-filter > 
+		        <action android:name="android.intent.action.MAIN"/>
+		        <category android:name="com.shihx.index.demos" />
+		    </intent-filter>
+		</activity>
+		<activity android:name="com.shihx.index.GPSInfoActivity" android:label="@string/GPSInfoActivity" android:theme="@style/Theme.Sherlock">
 		    <intent-filter > 
 		        <action android:name="android.intent.action.MAIN"/>
 		        <category android:name="com.shihx.index.demos" />
