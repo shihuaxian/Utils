@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:test_circle="http://schemas.android.com/apk/res/com.shihx.index"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <Button
+        android:id="@+id/test_circle_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_circle_btn_str"
+        android:onClick="startProgress" />
+    
+	<com.shihx.index.widget.DIYRoundProgressView
+	    android:id="@+id/circle_one"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    
+	    test_circle:roundColor="#D1D1D1"
+	    test_circle:roundProgressColor="#9A32CD"
+	    test_circle:textSize="25sp"
+	    test_circle:roundWidth="13dp"
+	    
+	     />
+	
+	<com.shihx.index.widget.DIYRoundProgressView
+	    android:id="@+id/circle_two"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    
+	    test_circle:roundColor="#C6E2FF"
+	    test_circle:roundProgressColor="#CD3333"
+	    test_circle:textSize="30sp"
+	     />
+	
+	<com.shihx.index.widget.DIYRoundProgressView
+	    android:id="@+id/circle_three"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    
+	    test_circle:roundColor="#3a3a3a"
+	    test_circle:roundProgressColor="#1A1A1A"
+	    test_circle:textIsDisplayable="false"
+	    test_circle:roundWidth="12dp"
+	     />
+	
+	<com.shihx.index.widget.DIYRoundProgressView
+	    android:id="@+id/circle_four"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    
+	    test_circle:textIsDisplayable="false"
+	    test_circle:roundWidth="8dp"
+	    test_circle:style="FILL"
+	     />
+</LinearLayout>

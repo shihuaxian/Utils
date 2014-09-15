@@ -10,6 +10,7 @@
 	<string name="slideActivity_str">slideActivity_str</string>
 	<string name="animationActivity">AnimationActivity</string>
 	<string name="GPSInfoActivity">GPSInfoActivity</string>
+	<string name="circlecctivity_str">CircleActivity</string>
 	
 	
 	<string name="clear"></string>
@@ -36,4 +37,5 @@
     <string name="sort_char_txt_str">A</string>
     
     <string name="test_fragment_txt_str">test_fragment_txt</string>
+    <string name="test_circle_btn_str">begin</string>
 </resources>
