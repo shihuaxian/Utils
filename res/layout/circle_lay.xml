@@ -50,7 +50,7 @@
 	    android:layout_height="100dp"
 	    
 	    test_circle:textIsDisplayable="false"
-	    test_circle:roundWidth="8dp"
+	    test_circle:roundWidth="1dp"
 	    test_circle:style="FILL"
 	     />
 </LinearLayout>
