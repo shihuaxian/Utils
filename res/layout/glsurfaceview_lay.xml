@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <com.shihx.index.widget.GlVideoView
+	    android:id="@+id/dt_gl_videoView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	     />
+     
+     <ProgressBar
+         android:id="@+id/bright_progressbar"
+         android:layout_width="25dp"
+         android:layout_height="100dp"
+         android:progressDrawable="@drawable/brightbar_progress"
+         android:indeterminateOnly="false"
+         android:progress="100"
+         android:max="255"
+         android:layout_marginLeft="50dp"
+         android:layout_centerVertical="true"  />
+     <ProgressBar
+         android:id="@+id/volume_progress"
+         android:layout_marginRight="100dp"
+         android:layout_width="20dp"
+         android:layout_height="200dp"
+         android:progressDrawable="@drawable/soundbar_progress"
+         android:indeterminateOnly="false"
+         android:progress="5"
+         android:max="15"
+         android:layout_centerVertical="true"
+         android:layout_alignParentRight="true" />
+</RelativeLayout>

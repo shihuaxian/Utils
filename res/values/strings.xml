@@ -11,6 +11,7 @@
 	<string name="animationActivity">AnimationActivity</string>
 	<string name="GPSInfoActivity">GPSInfoActivity</string>
 	<string name="circlecctivity_str">CircleActivity</string>
+	<string name="glsurface_view_str">GlSurfaceViewActivity</string>
 	
 	
 	<string name="clear"></string>
