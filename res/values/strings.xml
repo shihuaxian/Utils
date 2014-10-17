@@ -5,14 +5,15 @@
 	<string name="image_activity_str">ImageActivity</string>
 	<string name="action_activity_str">ActionItemActivity</string>
 	<string name="actionbar_viewpager_activity_str">ActionBarViewPager</string>
-	<string name="actionbar_viewpager_str">actionbar and viewpager</string>
-	<string name="letter_listview_str">letter_listview_str</string>
-	<string name="slideActivity_str">slideActivity_str</string>
+	<string name="actionbar_viewpager_str">Actionbar and Viewpager</string>
+	<string name="letter_listview_str">LetterListview</string>
+	<string name="slideActivity_str">SlideActivity_str</string>
 	<string name="animationActivity">AnimationActivity</string>
 	<string name="GPSInfoActivity">GPSInfoActivity</string>
 	<string name="circlecctivity_str">CircleActivity</string>
 	<string name="glsurface_view_str">GlSurfaceViewActivity</string>
 	<string name="device_info_str">Devices Info</string>
+	<string name="scroll_viewpager_str">ScrollViewPager</string>
 	
 	
 	<string name="clear"></string>
