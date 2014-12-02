@@ -3,9 +3,11 @@ package com.shihx.index;
 
 import com.shihx.index.floatview.FloatView;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
@@ -18,6 +20,7 @@ import android.widget.Toast;
  * @author shihx1
  *
  */
+@SuppressLint("NewApi")
 public class FloatViewActivity extends Activity {
 	//floatview 可扩展
 	private FloatView fv;
@@ -26,6 +29,7 @@ public class FloatViewActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		LinearLayout ly = new LinearLayout(this);
 		Button button = new Button(this);
 		ly.addView(button);
@@ -71,5 +75,15 @@ public class FloatViewActivity extends Activity {
 	        wm.addView(fv, params);
 		}
 	}
-
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch(item.getItemId()){
+		case android.R.id.home:
+			finish();
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 }
