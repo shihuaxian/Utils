@@ -15,6 +15,7 @@
 	<string name="device_info_str">Devices Info</string>
 	<string name="scroll_viewpager_str">ScrollViewPager</string>
 	<string name="float_view_activty_str">浮动可拖拽view</string>
+	<string name="list_check_box_str">listview选中重复混乱问题</string>
 	
 	
 	<string name="clear"></string>

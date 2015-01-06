@@ -86,6 +86,12 @@
 		        <category android:name="com.shihx.index.demos" />
 		    </intent-filter>
 		</activity>
+		<activity android:name="com.shihx.index.ListViewCheckBox" android:label="@string/list_check_box_str" android:theme="@style/Theme.Sherlock">
+		    <intent-filter > 
+		        <action android:name="android.intent.action.MAIN"/>
+		        <category android:name="com.shihx.index.demos" />
+		    </intent-filter>
+		</activity>
 	</application>
 	<uses-sdk android:minSdkVersion="8" />
 

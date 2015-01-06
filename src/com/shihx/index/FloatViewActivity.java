@@ -52,10 +52,18 @@ public class FloatViewActivity extends Activity {
 				showView(false);
 			}
 		});
+		fv.setOnLongClickListener(new View.OnLongClickListener() {
+			@Override
+			public boolean onLongClick(View v) {
+				// TODO Auto-generated method stub
+				wm.removeView(fv);
+				return false;
+			}
+		});
 	}
 	
+	final WindowManager wm = (WindowManager)getApplicationContext().getSystemService(WINDOW_SERVICE);
 	private void showView(boolean isNeedShow){
-		final WindowManager wm = (WindowManager)getApplicationContext().getSystemService(WINDOW_SERVICE);
 		if(fv!=null && fv.isShown()){
 			wm.removeView(fv);
 		}else{
