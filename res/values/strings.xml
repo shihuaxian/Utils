@@ -16,6 +16,7 @@
 	<string name="scroll_viewpager_str">ScrollViewPager</string>
 	<string name="float_view_activty_str">浮动可拖拽view</string>
 	<string name="list_check_box_str">listview选中重复混乱问题</string>
+	<string name="refresh_listview_str">下拉刷新</string>
 	
 	
 	<string name="clear"></string>
@@ -43,4 +44,12 @@
     
     <string name="test_fragment_txt_str">test_fragment_txt</string>
     <string name="test_circle_btn_str">begin</string>
+    
+	<string name="pull_to_refresh">下拉可以刷新</string>
+	<string name="release_to_refresh">释放立即刷新</string>
+	<string name="refreshing">正在刷新…</string>
+	<string name="not_updated_yet">暂未更新过</string>
+	<string name="updated_at">上次更新于%1$s前</string>
+	<string name="updated_just_now">刚刚更新</string>
+	<string name="time_error">时间有问题</string>
 </resources>
